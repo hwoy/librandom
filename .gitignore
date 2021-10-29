@@ -2,3 +2,4 @@
 *.obj
 dice
 *.o
+*.a
