@@ -1,7 +1,7 @@
 #include "lcg.h"
 #include "msvcrtrng.h"
 
-MSVCRTRNG msvcrtrngint(PMSVCRTRNG ms,URND32 seed)
+MSVCRTRNG msvcrtrnginit(PMSVCRTRNG ms,URND32 seed)
 {
 	return *ms=seed;
 }

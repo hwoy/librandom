@@ -17,7 +17,7 @@ int main()
 {
 	unsigned int i;
 	MSVCRTRNG ms;
-	msvcrtrngint(&ms,time(NULL));
+	msvcrtrnginit(&ms,time(NULL));
 	for(i=0;i<=20;++i)
 	{
 		printf("%u\n",dice6(&ms));

@@ -9,7 +9,7 @@ typedef MSVCRTRNG* PMSVCRTRNG;
 #define a_mslcg 214013
 #define c_mslcg 2531011
 
-MSVCRTRNG msvcrtrngint(PMSVCRTRNG ms,URND32 seed);
+MSVCRTRNG msvcrtrnginit(PMSVCRTRNG ms,URND32 seed);
 URND32 msvcrtrng(PMSVCRTRNG ms);
 
 #endif
