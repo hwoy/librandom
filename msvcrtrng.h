@@ -1,9 +1,9 @@
-#ifndef __MSRNG_H__
-#define __MSRNG_H__
+#ifndef __MSVCRTRNG_H__
+#define __MSVCRTRNG_H__
 
 typedef URND32 MSVCRTRNG;
-typedef const URND32* cont_PMSVCRTRNG;
-typedef URND32* PMSVCRTRNG;
+typedef const MSVCRTRNG* cont_PMSVCRTRNG;
+typedef MSVCRTRNG* PMSVCRTRNG;
 
 #define m_mslcg (1ULL<<32)
 #define a_mslcg 214013
