@@ -2,6 +2,7 @@
 #define __RANDOM_H__
 
 #include "lcg.h"
-#include "mslcg.h"
+#include "msvcrtrng.h"
+#include "glibcrng.h"
 
 #endif

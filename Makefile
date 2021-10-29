@@ -11,12 +11,16 @@ all: $(BIN)
 $(BIN): main.o $(LIB)
 	$(CC) -o $(BIN) main.o $(LIB)
 
-$(LIB): lcg.o mslcg.o
-	$(AR) crv $(LIB) lcg.o mslcg.o
+$(LIB): lcg.o msvcrtrng.o glibcrng.o
+	$(AR) crv $(LIB) lcg.o msvcrtrng.o glibcrng.o
 
-lcg.o: lcg.c lcg.h
-main.o: main.c random.h lcg.h mslcg.h
-mslcg.o: mslcg.c lcg.h mslcg.h
+
 
 clean:
 	rm *.o $(BIN) $(LIB)
+
+
+glibcrng.o: glibcrng.c glibcrng.h lcg.h
+lcg.o: lcg.c lcg.h
+main.o: main.c random.h lcg.h msvcrtrng.h glibcrng.h
+msvcrtrng.o: msvcrtrng.c lcg.h msvcrtrng.h

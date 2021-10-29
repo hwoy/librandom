@@ -9,18 +9,26 @@ int main()
 {
 	unsigned int i;
 	URND32 seed=SEED;
+	GLIBCRNG g;
 	
-	puts("=========== MSVCRT ===========");
+	puts("=========== LIBC ===========");
 	srand(SEED);
 	for(i=0;i<=10;++i)
 	{
 		printf("%u\n",rand());
 	}
 	
-	puts("=========== RANDOM ===========");
+	puts("=========== MSVCRT ===========");
 	for(i=0;i<=10;++i)
 	{
-		printf("%u\n",mslcg(&seed));
+		printf("%u\n",msvcrtrng(&seed));
+	}
+	
+	puts("=========== glibc ===========");
+	glibcrnginit(g,SEED);
+	for(i=0;i<=10;++i)
+	{
+		printf("%u\n",glibcrng(g));
 	}
 	
 	return 0;
