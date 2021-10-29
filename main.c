@@ -9,6 +9,7 @@ int main()
 {
 	unsigned int i;
 	URND32 seed=SEED;
+	MSVCRTRNG ms;
 	GLIBCRNG g;
 	
 	puts("=========== LIBC ===========");
@@ -19,6 +20,7 @@ int main()
 	}
 	
 	puts("=========== MSVCRT ===========");
+	msvcrtrngint(&ms,SEED);
 	for(i=0;i<=10;++i)
 	{
 		printf("%u\n",msvcrtrng(&seed));
